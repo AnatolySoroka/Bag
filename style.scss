@@ -174,7 +174,7 @@ body {
     padding-bottom: 37px;
     width: 254px;
     text-align: center;
-    &:has(button.active) {
+    &:has(button.mixitup-control-active) {
       border-bottom: 5px solid #f59b00;
     }
   }
@@ -188,8 +188,11 @@ body {
 }
 
 .categories__items {
-  display: flex;
-  justify-content: space-between;
+  // display: flex;
+  // justify-content: space-between;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(264px, 1fr));
+  place-items: center;
   gap: 10px;
 }
 
@@ -259,14 +262,25 @@ body {
     text-transform: capitalize;
     text-align: center;
     max-width: 510px;
-    margin: 0 auto;
+    margin: 0 auto 90px;
   }
+}
+
+.our__items {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(264px, 1fr));
+  place-items: center;
+  gap: 80px 30px;
 }
 
 .our__item {
   width: 264px;
   height: 273px;
   border-radius: 10px;
+}
+
+.our__item a img {
+  transition: transform 0.4s ease;
 }
 
 .transparent__btn {
@@ -277,7 +291,9 @@ body {
   padding: 15px 66px 15px 30px;
   color: #f59b00;
   text-transform: capitalize;
-  display: inline-block;
+  display: block;
+  width: fit-content;
+  margin: 122px auto 0;
 }
 
 .transparent__btn::after {
@@ -293,7 +309,6 @@ body {
 .cta__wrapper {
   border-radius: 10px;
   display: flex;
-  
 }
 
 .cta__img {
@@ -330,7 +345,7 @@ body {
 
 .form-img {
   position: absolute;
-  background-image: url('../images/form-bg.png');
+  background-image: url("../images/form-bg.png");
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center center;
@@ -340,7 +355,6 @@ body {
   left: 0;
 }
 
-
 @media (hover: hover) and (pointer: fine) {
   .menu__list-link:hover {
     opacity: 100%;
@@ -348,5 +362,10 @@ body {
   .categories__buttons button:hover {
     opacity: 100%;
     transform: scale(1.04);
+  }
+  .our__item:hover {
+    a img {
+      transform: scale(1.2);
+    }
   }
 }
