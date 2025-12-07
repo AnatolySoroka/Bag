@@ -1,4 +1,8 @@
-const mixer = mixitup(".categories");
+const mixer = mixitup('.categories', {
+  load: {
+    filter: '.water-resistant'
+  }
+});
 
 const carts = document.querySelectorAll('.our__item');
 
