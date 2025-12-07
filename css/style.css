@@ -271,9 +271,9 @@ body {
 }
 
 .our__item {
-  width: 264px;
   height: 273px;
   border-radius: 10px;
+  box-shadow: 2px 2px 10px #ccc;
 }
 
 .our__item a img {
@@ -361,7 +361,7 @@ body {
     transform: scale(1.04);
   }
   .our__item:hover a img {
-    transform: scale(1.2);
+    transform: scale(1.1);
   }
 }
 
