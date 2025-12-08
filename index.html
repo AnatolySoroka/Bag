@@ -64,13 +64,20 @@
           <div class="categories__wrapper">
             <div class="categories__buttons">
               <div class="button__wrapper">
-                <button class="mixitup-control-active" data-filter=".water-resistant">Water Resistant</button>
+                <button
+                  class="mixitup-control-active"
+                  data-filter=".water-resistant"
+                >
+                  Water Resistant
+                </button>
               </div>
               <div class="button__wrapper">
                 <button data-filter=".charging-system">Charging System</button>
               </div>
               <div class="button__wrapper">
-                <button data-filter=".artificial-leather">Artificial Leather</button>
+                <button data-filter=".artificial-leather">
+                  Artificial Leather
+                </button>
               </div>
               <div class="button__wrapper">
                 <button data-filter=".modern-clothes">Modern Clothes</button>
@@ -242,24 +249,28 @@
           <div class="cta__wrapper">
             <div class="cta__img">
               <div class="cta-bg"></div>
-              <img src="images/cta-img.png" alt="">
+              <img src="images/cta-img.png" alt="" />
             </div>
             <div class="cta__form">
-              <div class="form-bg"></div>
-              <div class="form-img"></div>
-              <form action="">
-                <h2>Lorem ipsum dolor sit amet  adipiscing elit.</h2>
-                <input type="text">
-                <input type="text">
-                <input type="text">
-                <input type="checkbox">
-                <button type="submit"></button>
-              </form>
+              <div class="form__wrapper">
+                <h2 class="form__title">Lorem ipsum dolor sit amet adipiscing elit.</h2>
+                <form>
+                  <div class="form__inputs">
+                    <input class="input__name" type="text" name="name" placeholder="Name" />
+                    <input class="input__email" type="email" name="email" placeholder="Email" />
+                    <input class="input__address" type="text" name="address" placeholder="Addrress" />
+                  </div>
+                  <label for="checkbox">
+                    <input class="input__checkbox" type="checkbox" id="checkbox" name="checkbox" />
+                    <span>Lorem ipsum dolor sit amet.</span>
+                  </label>
+                  <button class="form__btn" type="submit">join now</button>
+                </form>
+              </div>
             </div>
           </div>
         </div>
       </section>
-
     </main>
     <footer class="footer"></footer>
     <script
