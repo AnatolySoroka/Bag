@@ -385,7 +385,7 @@ form .form__btn {
   padding: 15px 30px;
   color: #fff;
   border-radius: 5px;
-  background-color: #F59B00;
+  background-color: #f59b00;
   text-transform: capitalize;
   margin-left: 30px;
 }
@@ -399,6 +399,18 @@ form .form__btn {
   align-items: center;
   flex-wrap: wrap;
   gap: 10px;
+}
+
+.footer {
+  background-image: url("../images/footer-background.png");
+}
+.footer__inner {
+  padding: 97px 0 97px;
+  background-color: rgba(47, 47, 47, 0.92);
+}
+.footer__content {
+  display: flex;
+  justify-content: space-between;
 }
 
 @media (hover: hover) and (pointer: fine) {
