@@ -410,6 +410,17 @@ form {
   }
 }
 
+.company {
+  margin-bottom: 130px;
+  &__images {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+}
+
 @media (hover: hover) and (pointer: fine) {
   .menu__list-link:hover {
     opacity: 100%;

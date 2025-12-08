@@ -390,6 +390,17 @@ form .form__btn {
   margin-left: 30px;
 }
 
+.company {
+  margin-bottom: 130px;
+}
+.company__images {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
 @media (hover: hover) and (pointer: fine) {
   .menu__list-link:hover {
     opacity: 100%;
