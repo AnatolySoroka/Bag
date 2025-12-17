@@ -423,6 +423,13 @@ form {
 
 .footer {
   background-image: url("../images/footer-background.png");
+  color: rgba(255, 255, 255, 0.7);
+  text-transform: capitalize;
+
+  &__logo {
+    margin-bottom: 20px;
+    display: block;
+  }
   &__inner {
     padding: 97px 0 97px;
     background-color: rgba(47, 47, 47, 0.92);
@@ -431,6 +438,52 @@ form {
   &__content {
     display: flex;
     justify-content: space-between;
+  }
+
+  &__column {
+    max-width: 264px;
+
+    h4 {
+      margin-bottom: 20px;
+      color: #fff;
+    }
+
+    ul {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    li a {
+      color: rgba(255, 255, 255, 0.7);
+    }
+  }
+
+  form {
+    margin-top: 27px;
+  }
+
+  .footer__input {
+    width: 100%;
+    background-color: transparent;
+    outline: none;
+    padding: 12px 21px;
+    border-radius: 5px;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    color: rgba(255, 255, 255, 0.7);
+    margin-bottom: 30px;
+  }
+
+  .footer__input::placeholder {
+    text-transform: capitalize;
+  }
+  
+  .form-btn {
+    background-color: #f59b00;
+    color: #fff;
+    padding: 10px 20px;
+    text-transform: capitalize;
+    border-radius: 4px;
   }
 }
 
