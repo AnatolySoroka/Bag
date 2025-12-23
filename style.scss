@@ -34,6 +34,7 @@ body {
   color: #fff;
   display: inline-block;
   text-transform: capitalize;
+  white-space: nowrap;
 }
 
 .logo__link {
@@ -48,7 +49,7 @@ body {
 }
 
 .menu {
-  flex: 1;
+  flex-grow: 1;
   justify-items: flex-end;
 
   .menu__list {
@@ -73,8 +74,10 @@ body {
 
 .hero__content {
   position: relative;
-  padding-top: 205px;
+  // padding-top: 205px;
   max-width: 400px;
+  margin-top: 205px;
+  margin-bottom: 210px;
 }
 
 .hero__baner {
@@ -88,7 +91,7 @@ body {
 
 .hero__title {
   color: #fff;
-  font-size: 61px;
+  font-size: clamp(1.5rem, calc(5vw + 0.5rem), 3.75rem);
   font-weight: 700;
   margin-bottom: 25px;
 
@@ -111,10 +114,12 @@ body {
 
 .hero__img {
   position: relative;
+  width: calc(100vw + 0.2rem);
+  align-content: flex-end;
+  justify-items: flex-end;
 }
 
 .hero__bg {
-  top: 79px;
   position: absolute;
   z-index: 1;
 }
@@ -122,7 +127,10 @@ body {
 .hero__bg-main {
   position: relative;
   z-index: 2;
-  padding-top: 86px;
+  right: 0;
+  bottom: 0;
+  max-width: 620px;
+  width: 100%;
 }
 
 .icons {
@@ -501,5 +509,38 @@ form {
     a img {
       transform: scale(1.1);
     }
+  }
+}
+
+
+@media (max-width: 1000px) {
+  .hero__content {
+    margin-bottom: 100px;
+  }
+  // .hero__bg-main {
+  //   max-width: 520px;
+  // }
+
+}
+
+@media (max-width: 992px) {
+
+}
+
+@media (max-width: 768px) {
+.header__wrapper {
+    gap: 60px;
+}
+.hero__img {
+  display: none;
+}
+}
+
+@media (max-width: 600px) {
+}
+
+@media (max-width: 450px) {
+  .icons {
+    left: 280px;
   }
 }
