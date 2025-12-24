@@ -1,19 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Bag</title>
-    <link rel="stylesheet" href="css/reset.css" />
-    <link rel="stylesheet" href="css/style.css" />
-  </head>
 
-  <body>
-    <header class="header">
-      <div class="container">
-        <div class="header__wrapper">
-          <a href="#" class="logo__link">Bag</a>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bag</title>
+  <link rel="stylesheet" href="css/reset.css" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+  <header class="header">
+    <div class="container">
+      <div class="header__wrapper">
+        <a href="#" class="logo__link">Bag</a>
+        <div class="sidebar">
           <nav class="menu">
             <ul class="menu__list">
               <li class="menu__list-item">
@@ -32,34 +34,42 @@
           </nav>
           <a href="#" class="yellow__btn">Shop Now</a>
         </div>
+        <button class="burger" aria-label="Toggle menu">
+          <svg class="burger__icon" width="32" height="32" viewBox="0 0 32 32">
+            <line class="top" x1="4" y1="8" x2="28" y2="8" />
+            <line class="middle" x1="4" y1="16" x2="28" y2="16" />
+            <line class="bottom" x1="4" y1="24" x2="28" y2="24" />
+          </svg>
+        </button>
       </div>
-    </header>
-    <main class="main">
-      <section class="hero">
-        <div class="container">
-          <div class="hero__inner">
-            <div class="hero__content">
-              <span class="hero__baner">Look Stylish Be Stylish.</span>
-              <h1 class="hero__title">Look Stylish Be <span>Stylish.</span></h1>
-              <p class="hero__subtitle">
-                Before starting this business you should have ideas about the
-                market and products to Compete with the Existing Businesses.
-              </p>
-              <a href="#" class="yellow__btn">Join Shop</a>
-              <div class="icons">
-                <div class="plane"></div>
-                <div class="mark"></div>
-                <div class="star">30%<span>OFF</span></div>
-              </div>
-            </div>
-            <div class="hero__img">
-              <img class="hero__bg" src="images/hero-bg.png" alt="" />
-              <img class="hero__bg-main" src="images/hero-bg-main.png" alt="" />
+    </div>
+  </header>
+  <main class="main">
+    <section class="hero">
+      <div class="container">
+        <div class="hero__inner">
+          <div class="hero__content">
+            <span class="hero__baner">Look Stylish Be Stylish.</span>
+            <h1 class="hero__title">Look Stylish Be <span>Stylish.</span></h1>
+            <p class="hero__subtitle">
+              Before starting this business you should have ideas about the
+              market and products to Compete with the Existing Businesses.
+            </p>
+            <a href="#" class="yellow__btn">Join Shop</a>
+            <div class="icons">
+              <div class="plane"></div>
+              <div class="mark"></div>
+              <div class="star">30%<span>OFF</span></div>
             </div>
           </div>
+          <div class="hero__img">
+            <img class="hero__bg" src="images/hero-bg.png" alt="" />
+            <img class="hero__bg-main" src="images/hero-bg-main.png" alt="" />
+          </div>
         </div>
-      </section>
-      <!-- <section class="categories">
+      </div>
+    </section>
+    <!-- <section class="categories">
         <div class="container">
           <div class="categories__wrapper">
             <div class="categories__buttons">
@@ -354,12 +364,10 @@
         </div>
       </div>
     </footer> -->
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/mixitup/3.3.1/mixitup.min.js"
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mixitup/3.3.1/mixitup.min.js"
       integrity="sha512-nKZDK+ztK6Ug+2B6DZx+QtgeyAmo9YThZob8O3xgjqhw2IVQdAITFasl/jqbyDwclMkLXFOZRiytnUrXk/PM6A=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    ></script>
+      crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="js/main.js"></script>
-  </body>
+</body>
+
 </html>
