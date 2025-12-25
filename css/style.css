@@ -550,8 +550,11 @@ form .form__btn {
   }
   .categories__buttons {
     flex-wrap: wrap;
-    margin-bottom: 60px;
-    gap: 20px 0;
+    margin-bottom: 30px;
+    gap: 10px 0;
+  }
+  .categories__buttons .button__wrapper {
+    padding-bottom: 10px;
   }
   .about,
   .our {
