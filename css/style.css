@@ -209,6 +209,7 @@ body.active {
   padding-bottom: 37px;
   width: 254px;
   text-align: center;
+  border-bottom: 5px solid transparent;
 }
 .categories__buttons .button__wrapper:has(button.mixitup-control-active) {
   border-bottom: 5px solid #f59b00;
@@ -543,6 +544,14 @@ form .form__btn {
   .menu__list {
     flex-direction: column;
     text-align: center;
+  }
+  .categories {
+    padding: 60px 0;
+  }
+  .categories__buttons {
+    flex-wrap: wrap;
+    margin-bottom: 60px;
+    gap: 20px 0;
   }
 }
 @media (max-width: 600px) {
