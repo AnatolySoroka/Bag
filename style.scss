@@ -622,6 +622,19 @@ form {
     margin-bottom: 60px;
     gap: 20px 0;
   }
+
+  .about,
+  .our {
+    margin-bottom: 100px;
+  }
+
+  .about__inner {
+    justify-content: center;
+  }
+
+  .about__images  {
+    display: none;
+  }
 }
 
 @media (max-width: 600px) {
