@@ -1,9 +1,16 @@
+html {
+  overflow-x: hidden;
+}
+
+html:has(body.active) {
+  overflow: hidden;
+}
+
 body {
   position: relative;
   font-family: sans-serif;
   font-size: 16px;
   font-weight: 400;
-  overflow-x: hidden;
 }
 body.active {
   overflow-y: hidden;
@@ -556,7 +563,7 @@ form .form__btn {
     flex-direction: column;
     padding-top: 50px;
     gap: 30px;
-    transform: translateX(200%);
+    transform: translateX(100%);
     background-color: rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(10px);
     box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.37);
