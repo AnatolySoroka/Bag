@@ -4,6 +4,7 @@ body {
   font-size: 16px;
   font-weight: 400;
   overflow-x: hidden;
+
   &.active {
     overflow-y: hidden;
   }
@@ -52,14 +53,10 @@ body {
 }
 
 .header {
-  // position: sticky;
-  // top: 0px;
-  // left: 0;
-  // right: 0;
-  // width: 100%;
-  // z-index: 3;
-  // background-color: #fff;
-  background-color: #2f2f2f;
+  position: absolute;
+  width: 100%;
+  z-index: 10;
+  background-color: transparent;
   padding-top: 32px;
 }
 
@@ -108,6 +105,7 @@ body {
 }
 
 .hero {
+  position: relative;
   background-color: #2f2f2f;
 }
 
@@ -118,7 +116,7 @@ body {
 .hero__content {
   position: relative;
   max-width: 400px;
-  margin-top: 120px;
+  margin-top: 160px;
   margin-bottom: 210px;
 }
 
@@ -136,6 +134,8 @@ body {
   font-size: clamp(1.5rem, calc(5vw + 0.5rem), 3.75rem);
   font-weight: 700;
   margin-bottom: 25px;
+  text-shadow: 0 4px 12px rgba(0, 0, 0, 0.6);
+
 
   span {
     color: transparent;
@@ -152,6 +152,8 @@ body {
   color: #fff;
   opacity: 70%;
   line-height: 160%;
+  text-shadow: 0 4px 12px rgba(0, 0, 0, 0.6);
+
 }
 
 .hero__img {
@@ -563,11 +565,6 @@ form {
   .hero__content {
     margin-bottom: 100px;
   }
-
-  // .hero__bg-main {
-  //   max-width: 520px;
-  // }
-
 }
 
 @media (max-width: 992px) {}
@@ -577,19 +574,39 @@ form {
     gap: 60px;
   }
 
+  .hero::after {
+    content: '';
+      position: absolute;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.1);
+      background: linear-gradient(90deg, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0.5) 40%, rgba(0, 0, 0, 0) 100%);
+      z-index: 2;
+  }
+
+  .hero__content {
+    z-index: 3;
+  }
+
   .hero__img {
-    display: none;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+    .hero__bg-main {
+      max-width: 470px;
+    }
   }
 
   .burger {
     position: relative;
     display: block;
-    z-index: 2;
+    z-index: 4;
   }
 
   .sidebar {
     position: absolute;
-    z-index: 1;
+    z-index: 3;
     top: 0;
     right: 0;
     bottom: 0;
@@ -602,6 +619,7 @@ form {
     backdrop-filter: blur(10px);
     box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.37);
     border-left: 1px solid rgba(255, 255, 255, 0.2);
+    min-height: 100dvh;
   }
 
   .sidebar:has(+ .burger.is-open) {
@@ -636,14 +654,14 @@ form {
     justify-content: center;
   }
 
-  .about__images  {
+  .about__images {
     display: none;
   }
 }
 
 @media (max-width: 600px) {
   .hero__content {
-    margin-top: 60px;
+    margin-top: 100px;
   }
 }
 
@@ -657,9 +675,11 @@ form {
   .icons .star {
     right: -12px;
   }
+
   .icons .mark {
     width: 100px;
   }
+
   .sidebar {
     width: 100%;
   }
