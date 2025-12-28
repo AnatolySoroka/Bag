@@ -1,10 +1,10 @@
-html {
-  overflow-x: hidden;
-}
+// html {
+//   overflow-x: hidden;
+// }
 
-html:has(body.active) {
-  overflow: hidden;
-}
+// html:has(body.active) {
+//   overflow: hidden;
+// }
 
 body {
   position: relative;
@@ -15,6 +15,10 @@ body {
   &.active {
     overflow-y: hidden;
   }
+
+  // &.active .header {
+  //   overflow-x: visible;
+  // }
 }
 
 // * {
@@ -65,6 +69,7 @@ body {
   z-index: 10;
   background-color: transparent;
   padding-top: 32px;
+  // overflow-x: hidden;
 }
 
 .header__wrapper {
@@ -114,6 +119,7 @@ body {
 .hero {
   position: relative;
   background-color: #2f2f2f;
+  overflow: hidden;
 }
 
 .hero__inner {
@@ -165,7 +171,7 @@ body {
 
 .hero__img {
   position: relative;
-  width: calc(100vw + 0.2rem);
+  width: 100%;
   align-content: flex-end;
   justify-items: flex-end;
 }
@@ -600,6 +606,7 @@ form {
     left: 0;
     right: 0;
     z-index: 1;
+    max-width: 100%;
     .hero__bg-main {
       max-width: 470px;
     }
@@ -612,14 +619,14 @@ form {
   }
 
   .sidebar {
-    position: absolute;
+    position: fixed;
     z-index: 3;
     top: 0;
     right: 0;
     bottom: 0;
     width: 300px;
     flex-direction: column;
-    padding-top: 50px;
+    padding: 50px 0;
     gap: 30px;
     transform: translateX(100%);
     background-color: rgba(255, 255, 255, 0.1);
@@ -627,6 +634,7 @@ form {
     box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.37);
     border-left: 1px solid rgba(255, 255, 255, 0.2);
     min-height: 100dvh;
+    overflow: auto;
   }
 
   .sidebar:has(+ .burger.is-open) {
