@@ -8,6 +8,14 @@ body.active {
   overflow-y: hidden;
 }
 
+html {
+  background-color: #0f0f0f;
+}
+
+body {
+  background-color: transparent;
+}
+
 .container {
   max-width: 1177px;
   margin: 0 auto;
@@ -91,6 +99,7 @@ body.active {
   color: #fff;
   opacity: 60%;
   transition: opacity 0.3s ease;
+  text-shadow: 0 4px 12px rgba(0, 0, 0, 0.6);
 }
 
 .hero {
@@ -204,6 +213,7 @@ body.active {
 
 .categories {
   padding: 130px 0;
+  background-color: #fff;
 }
 
 .categories__buttons {
@@ -246,7 +256,8 @@ body.active {
 }
 
 .about {
-  margin-bottom: 130px;
+  padding-bottom: 130px;
+  background-color: #fff;
 }
 
 .about__inner {
@@ -287,7 +298,8 @@ body.active {
 }
 
 .our {
-  margin-bottom: 130px;
+  padding-bottom: 130px;
+  background-color: #fff;
 }
 .our__title {
   margin-bottom: 25px;
@@ -347,7 +359,8 @@ body.active {
 }
 
 .cta {
-  margin-bottom: 130px;
+  padding-bottom: 130px;
+  background-color: #fff;
 }
 
 .cta__wrapper {
@@ -357,6 +370,12 @@ body.active {
 
 .cta__img {
   position: relative;
+  width: 43%;
+  background-image: url("../images/cta-img.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-color: rgba(47, 47, 47, 0.6);
 }
 
 .cta-bg {
@@ -371,6 +390,9 @@ body.active {
 .cta__form {
   position: relative;
   background-image: url("../images/form-bg.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 .cta__form .form__wrapper {
   background-color: rgba(47, 47, 47, 0.95);
@@ -433,7 +455,8 @@ form .form__btn {
 }
 
 .company {
-  margin-bottom: 130px;
+  padding-bottom: 130px;
+  background-color: #fff;
 }
 .company__images {
   display: flex;
@@ -516,6 +539,19 @@ form .form__btn {
     margin-bottom: 100px;
   }
 }
+@media (max-width: 992px) {
+  .cta__img {
+    display: none;
+  }
+  .cta__form {
+    flex-grow: 1;
+  }
+  .form__wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
 @media (max-width: 768px) {
   .header__wrapper {
     gap: 60px;
@@ -560,13 +596,13 @@ form .form__btn {
     transform: translateX(100%);
     background-color: rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(10px);
-    box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.37);
-    border-left: 1px solid rgba(255, 255, 255, 0.2);
     min-height: 100dvh;
     overflow: auto;
   }
   .sidebar:has(+ .burger.is-open) {
     transform: translateX(0);
+    box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.37);
+    border-left: 1px solid rgba(255, 255, 255, 0.2);
   }
   .menu__list {
     flex-direction: column;
@@ -585,7 +621,7 @@ form .form__btn {
   }
   .about,
   .our {
-    margin-bottom: 100px;
+    padding-bottom: 100px;
   }
   .about__inner {
     justify-content: center;
@@ -597,6 +633,13 @@ form .form__btn {
 @media (max-width: 600px) {
   .hero__content {
     margin-top: 100px;
+  }
+  .company {
+    padding-bottom: 60px;
+  }
+  .company__images {
+    justify-content: center;
+    gap: 20px;
   }
 }
 @media (max-width: 450px) {
