@@ -482,6 +482,8 @@ form .form__btn {
 .footer__content {
   display: flex;
   justify-content: space-between;
+  gap: 30px;
+  flex-wrap: wrap;
 }
 .footer__column {
   max-width: 264px;
@@ -640,6 +642,10 @@ form .form__btn {
   .company__images {
     justify-content: center;
     gap: 20px;
+  }
+  .footer__content {
+    flex-direction: column;
+    align-items: center;
   }
 }
 @media (max-width: 450px) {
