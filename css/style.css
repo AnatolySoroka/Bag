@@ -476,7 +476,7 @@ form .form__btn {
   display: block;
 }
 .footer__inner {
-  padding: 97px 0 97px;
+  padding: 97px 0;
   background-color: rgba(47, 47, 47, 0.92);
 }
 .footer__content {
@@ -646,6 +646,12 @@ form .form__btn {
   .footer__content {
     flex-direction: column;
     align-items: center;
+  }
+  .footer__column {
+    width: 100%;
+  }
+  .footer__inner {
+    padding: 50px 0;
   }
 }
 @media (max-width: 450px) {

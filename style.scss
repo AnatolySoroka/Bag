@@ -514,7 +514,7 @@ form {
   }
 
   &__inner {
-    padding: 97px 0 97px;
+    padding: 97px 0;
     background-color: rgba(47, 47, 47, 0.92);
   }
 
@@ -720,6 +720,12 @@ form {
     align-items: center;
     // justify-content: center;
   }
+  .footer__column {
+    width: 100%;
+  }
+  .footer__inner {
+    padding: 50px 0;
+}
 }
 
 @media (max-width: 450px) {
