@@ -7,4 +7,3 @@ initBurger();
 initRandomColor();
 initMixitup();
 initStickyHeader();
-

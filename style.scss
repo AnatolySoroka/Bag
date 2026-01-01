@@ -8,12 +8,12 @@ body {
 
   &.active {
     position: fixed;
-    overflow: hidden;
   }
 }
 
 html {
   background-color: #0f0f0f;
+  // overflow-x: hidden;
 }
 
 .container {
@@ -67,11 +67,16 @@ html {
   -ms-flex-align: center;
   align-items: center;
   gap: 90px;
-  -webkit-transition: -webkit-transform 0.5s ease;
-  transition: -webkit-transform 0.5s ease;
-  -o-transition: transform 0.5s ease;
-  transition: transform 0.5s ease;
-  transition: transform 0.5s ease, -webkit-transform 0.5s ease;
+  //-webkit-transition: -webkit-transform 0.5s ease;
+  //transition: -webkit-transform 0.5s ease;
+  //-o-transition: transform 0.5s ease;
+  //transition: transform 0.5s ease;
+  //transition: transform 0.5s ease, -webkit-transform 0.5s ease;
+  transition: right 0.5s ease ;
+  -webkit-transition: right 0.5s ease ;
+  -moz-transition: right 0.5s ease ;
+  -ms-transition: right 0.5s ease ;
+  -o-transition: right 0.5s ease ;
 }
 
 .header {
@@ -821,7 +826,7 @@ form {
     position: fixed;
     z-index: 3;
     top: 0;
-    right: 0;
+    right: -60%;
     bottom: 0;
     width: 300px;
     -webkit-box-orient: vertical;
@@ -830,20 +835,21 @@ form {
     flex-direction: column;
     padding: 50px 0;
     gap: 30px;
-    -webkit-transform: translateX(100%);
-    -ms-transform: translateX(100%);
-    transform: translateX(100%);
+    // -webkit-transform: translateX(100%);
+    // -ms-transform: translateX(100%);
+    // transform: translateX(100%);
     background-color: rgba(255, 255, 255, 0.1);
     -webkit-backdrop-filter: blur(10px);
     backdrop-filter: blur(10px);
     min-height: 100dvh;
-    overflow: auto;
+    overflow-y: auto;
   }
 
   .sidebar:has(+ .burger.is-open) {
-    -webkit-transform: translateX(0);
-    -ms-transform: translateX(0);
-    transform: translateX(0);
+    // -webkit-transform: translateX(0);
+    // -ms-transform: translateX(0);
+    // transform: translateX(0);
+    right: 0%;
     -webkit-box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.37);
     box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.37);
     border-left: 1px solid rgba(255, 255, 255, 0.2);
