@@ -11,7 +11,8 @@ body {
   font-weight: 400;
 }
 body.active {
-  overflow-y: hidden;
+  position: fixed;
+  overflow: hidden;
 }
 
 html {
