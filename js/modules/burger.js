@@ -1,5 +1,5 @@
 export function initBurger() {
-  const body = document.querySelector("body");
+  const body = document.body;
   const burger = document.querySelector(".burger");
 
   let scrollPosition = 0;
@@ -7,22 +7,32 @@ export function initBurger() {
   function lockScroll() {
     scrollPosition = window.scrollY;
 
-    document.body.style.position = 'fixed';
-    document.body.style.top = `-${scrollPosition}px`;
-    document.body.style.width = '100%';
+    body.style.position = "fixed";
+    body.style.top = `-${scrollPosition}px`;
+    body.style.width = "100%";
+
+    document.documentElement.classList.add("menu-open");
   }
 
   function unlockScroll() {
-    document.body.style.position = '';
-    document.body.style.top = '';
-    document.body.style.width = '';
+  body.style.position = "";
+  body.style.top = "";
+  body.style.width = "";
 
-    window.scrollTo(0, scrollPosition);
+  window.scrollTo(0, scrollPosition);
+
+  document.documentElement.classList.remove("menu-open");
+
+  // 🔥 ОЦЕ ГОЛОВНЕ
+  if (window.resetHeaderScrollState) {
+    window.resetHeaderScrollState();
   }
+}
 
   burger.addEventListener("click", () => {
-    burger.classList.toggle("is-open");
-    if (burger.classList.contains("is-open")) {
+    const isOpen = burger.classList.toggle("is-open");
+
+    if (isOpen) {
       lockScroll();
       body.classList.add("active");
     } else {
