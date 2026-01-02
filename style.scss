@@ -102,7 +102,7 @@ html {
   transition: transform 0.3s ease, background-color 0.3s ease,
     box-shadow 0.3s ease, -webkit-transform 0.3s ease,
     -webkit-box-shadow 0.3s ease;
-  padding: 32px 0 0;
+  padding: 10px 0;
 }
 
 .header.is-hidden {
@@ -611,7 +611,13 @@ form {
 .company {
   padding-bottom: 130px;
   background-color: #fff;
-
+  .carousel {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    overflow-x: hidden;
+    gap: 10px;
+  }
   &__images {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -622,9 +628,37 @@ form {
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center;
-    -ms-flex-wrap: wrap;
-    flex-wrap: wrap;
     gap: 10px;
+    -webkit-animation: spin 10s infinite linear;
+    animation: spin 10s infinite linear;
+  }
+
+  &__images img {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 5em;
+    flex: 0 0 5em;
+  }
+
+  .carousel::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+@-webkit-keyframes spin {
+  from {
+    translate: 0;
+  }
+  to {
+    translate: -100%;
+  }
+}
+
+@keyframes spin {
+  from {
+    translate: 0;
+  }
+  to {
+    translate: -100%;
   }
 }
 
@@ -906,6 +940,10 @@ form {
     display: none;
   }
 
+  .about__content {
+    text-align: center;
+  }
+
   .cta__form .form__wrapper {
     padding: 50px 20px;
 
@@ -994,5 +1032,9 @@ form {
 
   .sidebar {
     width: 100%;
+  }
+
+  html.menu-open .sidebar {
+    border-left: none;
   }
 }
