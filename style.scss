@@ -616,7 +616,8 @@ form {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    overflow-x: auto;
+    // overflow: auto;
+    // overflow-x: hidden;
     touch-action: none;
     gap: 10px;
   }

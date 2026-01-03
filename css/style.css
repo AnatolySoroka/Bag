@@ -573,7 +573,6 @@ form .form__btn {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  overflow-x: auto;
   touch-action: none;
   gap: 10px;
 }
