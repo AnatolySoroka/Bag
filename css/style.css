@@ -572,16 +572,13 @@ form .form__btn {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  overflow-x: hidden;
+  overflow-x: auto;
   gap: 10px;
 }
 .company__images {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
@@ -590,9 +587,11 @@ form .form__btn {
   animation: spin 10s infinite linear;
 }
 .company__images img {
+  display: in;
   -webkit-box-flex: 0;
   -ms-flex: 0 0 5em;
   flex: 0 0 5em;
+  border: 1px solid red;
 }
 .company .carousel::-webkit-scrollbar {
   display: none;
