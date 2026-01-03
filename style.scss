@@ -611,15 +611,16 @@ form {
 .company {
   padding-bottom: 130px;
   background-color: #fff;
+  overflow: hidden;
   .carousel {
-    // display: -webkit-box;
-    // display: -ms-flexbox;
-    // display: flex;
-    // overflow-x: auto;
-    // gap: 10px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    overflow-x: auto;
+    touch-action: none;
+    gap: 10px;
   }
   &__images {
-    // min-width: 100%;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -630,8 +631,9 @@ form {
     -webkit-animation: spin 10s infinite linear;
     animation: spin 10s infinite linear;
   }
-
+  
   &__images img {
+    max-width: fit-content ;
     -webkit-box-flex: 0;
     -ms-flex: 0 0 5em;
     flex: 0 0 5em;
@@ -982,8 +984,8 @@ form {
     -ms-flex-pack: center;
     justify-content: center;
     gap: 20px;
-    -webkit-animation: spin 5s infinite linear;
-    animation: spin 5s infinite linear;
+    // -webkit-animation: spin 5s infinite linear;
+    // animation: spin 5s infinite linear;
 }
 
   .footer__content {

@@ -567,6 +567,15 @@ form .form__btn {
 .company {
   padding-bottom: 130px;
   background-color: #fff;
+  overflow: hidden;
+}
+.company .carousel {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  overflow-x: auto;
+  touch-action: none;
+  gap: 10px;
 }
 .company__images {
   display: -webkit-box;
@@ -580,6 +589,7 @@ form .form__btn {
   animation: spin 10s infinite linear;
 }
 .company__images img {
+  max-width: fit-content;
   -webkit-box-flex: 0;
   -ms-flex: 0 0 5em;
   flex: 0 0 5em;
@@ -862,8 +872,6 @@ form .form__btn {
     -ms-flex-pack: center;
     justify-content: center;
     gap: 20px;
-    -webkit-animation: spin 5s infinite linear;
-    animation: spin 5s infinite linear;
   }
   .footer__content {
     -webkit-box-orient: vertical;
