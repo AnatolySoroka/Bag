@@ -612,11 +612,11 @@ form {
   padding-bottom: 130px;
   background-color: #fff;
   .carousel {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    overflow-x: auto;
-    gap: 10px;
+    // display: -webkit-box;
+    // display: -ms-flexbox;
+    // display: flex;
+    // overflow-x: auto;
+    // gap: 10px;
   }
   &__images {
     // min-width: 100%;
@@ -632,11 +632,9 @@ form {
   }
 
   &__images img {
-    display: in;
     -webkit-box-flex: 0;
     -ms-flex: 0 0 5em;
     flex: 0 0 5em;
-    border: 1px solid red;
   }
 
   .carousel::-webkit-scrollbar {
@@ -984,7 +982,9 @@ form {
     -ms-flex-pack: center;
     justify-content: center;
     gap: 20px;
-  }
+    -webkit-animation: spin 5s infinite linear;
+    animation: spin 5s infinite linear;
+}
 
   .footer__content {
     -webkit-box-orient: vertical;
