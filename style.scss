@@ -16,6 +16,17 @@ html {
   // overflow-x: hidden;
 }
 
+.lazy img,
+img.lazy {
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.lazy.loaded img,
+img.lazy.loaded {
+  opacity: 1;
+}
+
 .container {
   max-width: 1177px;
   margin: 0 auto;
@@ -443,6 +454,7 @@ html {
 }
 
 .our__item {
+  max-width: 267px;
   height: 273px;
   border-radius: 10px;
   -webkit-box-shadow: 2px 2px 10px #ccc;
@@ -632,9 +644,9 @@ form {
     -webkit-animation: spin 10s infinite linear;
     animation: spin 10s infinite linear;
   }
-  
+
   &__images img {
-    max-width: fit-content ;
+    max-width: fit-content;
     -webkit-box-flex: 0;
     -ms-flex: 0 0 5em;
     flex: 0 0 5em;
@@ -987,7 +999,7 @@ form {
     gap: 20px;
     // -webkit-animation: spin 5s infinite linear;
     // animation: spin 5s infinite linear;
-}
+  }
 
   .footer__content {
     -webkit-box-orient: vertical;
