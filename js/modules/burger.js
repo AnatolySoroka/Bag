@@ -10,8 +10,7 @@ export function initBurger() {
     scrollPosition = window.scrollY;
 
     // ✅ рахуємо ширину скролбару
-    scrollbarWidth =
-      window.innerWidth - document.documentElement.clientWidth;
+    scrollbarWidth = window.innerWidth - document.documentElement.clientWidth;
 
     body.style.position = "fixed";
     body.style.top = `-${scrollPosition}px`;
@@ -43,7 +42,8 @@ export function initBurger() {
 
   burger.addEventListener("click", () => {
     const isOpen = burger.classList.toggle("is-open");
-
+    const expanded = burger.getAttribute("aria-expanded") === "true";
+    burger.setAttribute("aria-expanded", String(!expanded));
     if (isOpen) {
       lockScroll();
       body.classList.add("active");

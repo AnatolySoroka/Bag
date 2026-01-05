@@ -18,8 +18,8 @@
       <div class="header__wrapper">
         <a href="#" class="logo__link">Bag</a>
         <div class="sidebar">
-          <nav class="menu">
-            <ul class="menu__list">
+          <nav class="menu" aria-label="Main navigation">
+            <ul class="menu__list" id="main-menu">
               <li class="menu__list-item">
                 <a href="#" class="menu__list-link">Home</a>
               </li>
@@ -36,7 +36,12 @@
           </nav>
           <a href="#" class="yellow__btn">Shop Now</a>
         </div>
-        <button class="burger" aria-label="Toggle menu">
+        <button 
+          class="burger" 
+          aria-label="Open menu"
+          aria-controls="main-menu"
+          aria-expanded="false"
+          >
           <svg class="burger__icon" width="32" height="32" viewBox="0 0 32 32">
             <line class="top" x1="4" y1="8" x2="28" y2="8" />
             <line class="middle" x1="4" y1="16" x2="28" y2="16" />
@@ -67,9 +72,9 @@
           <div class="hero__img">
             <picture>
               <source srcset="images/hero-bg.webp" type="image/webp">
-              <img class="hero__bg" src="images/hero-bg.png" alt="background" loading="lazy">
+              <img class="hero__bg" src="images/hero-bg.png" alt="Background image for main section" loading="lazy">
             </picture>
-            <picture>
+            <picture aria-hidden="true">
               <source srcset="images/hero-bg-main.webp" type="image/webp">
               <img class="hero__bg-main" src="images/hero-bg-main.png" alt="bg main" loading="lazy">
             </picture>
@@ -85,101 +90,102 @@
                 <button
                   class="mixitup-control-active"
                   data-filter=".water-resistant"
+                  aria-label="Filter button Waterproof backpacks"
                 >
                   Water Resistant
                 </button>
               </div>
               <div class="button__wrapper">
-                <button data-filter=".charging-system">Charging System</button>
+                <button data-filter=".charging-system" aria-label="Filter Button Backpacks with Charging Port">Charging System</button>
               </div>
               <div class="button__wrapper">
-                <button data-filter=".artificial-leather">
+                <button data-filter=".artificial-leather" aria-label="Filter button Faux leather backpacks">
                   Artificial Leather
                 </button>
               </div>
               <div class="button__wrapper">
-                <button data-filter=".modern-clothes">Modern Clothes</button>
+                <button data-filter=".modern-clothes" aria-label="Filter button modern backpacks">Modern Clothes</button>
               </div>
             </div>
             <div class="categories__items">
               <div class="categories__item mix charging-system">
                 <a href="#">
-                  <img class="lazy" loading="lazy" data-src="images/gategories-img-1.webp" src="images/placeholder-img.png" alt="" />
+                  <img class="lazy" loading="lazy" data-src="images/gategories-img-1.webp" src="images/placeholder-img.png" alt="Backpacks with Charging Port" />
                 </a>
               </div>
               <div class="categories__item mix modern-clothes">
                 <a href="#">
-                  <img class="lazy" loading="lazy" data-src="images/gategories-img-2.webp" src="images/placeholder-img.png" alt="" />
+                  <img class="lazy" loading="lazy" data-src="images/gategories-img-2.webp" src="images/placeholder-img.png" alt="modern backpacks" />
                 </a>
               </div>
               <div class="categories__item mix charging-system">
                 <a href="#">
-                  <img class="lazy" loading="lazy" data-src="images/gategories-img-3.webp" src="images/placeholder-img.png" alt="" />
+                  <img class="lazy" loading="lazy" data-src="images/gategories-img-3.webp" src="images/placeholder-img.png" alt="Backpacks with Charging Port" />
                 </a>
               </div>
               <div class="categories__item mix charging-system">
                 <a href="#">
-                  <img class="lazy" loading="lazy" data-src="images/gategories-img-4.webp" src="images/placeholder-img.png" alt="" />
+                  <img class="lazy" loading="lazy" data-src="images/gategories-img-4.webp" src="images/placeholder-img.png" alt="Backpacks with Charging Port" />
                 </a>
               </div>
               <div class="categories__item mix water-resistant">
                 <a href="#">
-                  <img class="lazy" loading="lazy" data-src="images/gategories-img-5.webp" src="images/placeholder-img.png" alt="" />
+                  <img class="lazy" loading="lazy" data-src="images/gategories-img-5.webp" src="images/placeholder-img.png" alt="Waterproof backpacks" />
                 </a>
               </div>
               <div class="categories__item mix artificial-leather">
                 <a href="#">
-                  <img class="lazy" loading="lazy" data-src="images/gategories-img-6.webp" src="images/placeholder-img.png" alt="" />
+                  <img class="lazy" loading="lazy" data-src="images/gategories-img-6.webp" src="images/placeholder-img.png" alt="Faux leather backpacks" />
                 </a>
               </div>
               <div class="categories__item mix artificial-leather">
                 <a href="#">
-                  <img class="lazy" loading="lazy" data-src="images/gategories-img-7.webp" src="images/placeholder-img.png" alt="" />
+                  <img class="lazy" loading="lazy" data-src="images/gategories-img-7.webp" src="images/placeholder-img.png" alt="Faux leather backpacks" />
                 </a>
               </div>
               <div class="categories__item mix artificial-leather">
                 <a href="#">
-                  <img class="lazy" loading="lazy" data-src="images/gategories-img-8.webp" src="images/placeholder-img.png" alt="" />
+                  <img class="lazy" loading="lazy" data-src="images/gategories-img-8.webp" src="images/placeholder-img.png" alt="Faux leather backpacks" />
                 </a>
               </div>
               <div class="categories__item mix artificial-leather">
                 <a href="#">
-                  <img class="lazy" loading="lazy" data-src="images/gategories-img-9.webp" src="images/placeholder-img.png" alt="" />
+                  <img class="lazy" loading="lazy" data-src="images/gategories-img-9.webp" src="images/placeholder-img.png" alt="Faux leather backpacks" />
                 </a>
               </div>
               <div class="categories__item mix charging-system">
                 <a href="#">
-                  <img class="lazy" loading="lazy" data-src="images/gategories-img-10.webp" src="images/placeholder-img.png" alt="" />
+                  <img class="lazy" loading="lazy" data-src="images/gategories-img-10.webp" src="images/placeholder-img.png" alt="Backpacks with Charging Port" />
                 </a>
               </div>
               <div class="categories__item mix water-resistant">
                 <a href="#">
-                  <img class="lazy" loading="lazy" data-src="images/gategories-img-11.webp" src="images/placeholder-img.png" alt="" />
+                  <img class="lazy" loading="lazy" data-src="images/gategories-img-11.webp" src="images/placeholder-img.png" alt="Waterproof backpacks" />
                 </a>
               </div>
               <div class="categories__item mix water-resistant">
                 <a href="#">
-                  <img class="lazy" loading="lazy" data-src="images/gategories-img-12.webp" src="images/placeholder-img.png" alt="" />
+                  <img class="lazy" loading="lazy" data-src="images/gategories-img-12.webp" src="images/placeholder-img.png" alt="Waterproof backpacks" />
                 </a>
               </div>
               <div class="categories__item mix water-resistant">
                 <a href="#">
-                  <img class="lazy" loading="lazy" data-src="images/gategories-img-13.webp" src="images/placeholder-img.png" alt="" />
+                  <img class="lazy" loading="lazy" data-src="images/gategories-img-13.webp" src="images/placeholder-img.png" alt="Waterproof backpacks" />
                 </a>
               </div>
               <div class="categories__item mix modern-clothes">
                 <a href="#">
-                  <img class="lazy" loading="lazy" data-src="images/gategories-img-14.webp" src="images/placeholder-img.png" alt="" />
+                  <img class="lazy" loading="lazy" data-src="images/gategories-img-14.webp" src="images/placeholder-img.png" alt="modern backpacks" />
                 </a>
               </div>
               <div class="categories__item mix modern-clothes">
                 <a href="#">
-                  <img class="lazy" loading="lazy" data-src="images/gategories-img-15.webp" src="images/placeholder-img.png" alt="" />
+                  <img class="lazy" loading="lazy" data-src="images/gategories-img-15.webp" src="images/placeholder-img.png" alt="modern backpacks" />
                 </a>
               </div>
               <div class="categories__item mix modern-clothes">
                 <a href="#">
-                  <img class="lazy" loading="lazy" data-src="images/gategories-img-16.webp" src="images/placeholder-img.png" alt="" />
+                  <img class="lazy" loading="lazy" data-src="images/gategories-img-16.webp" src="images/placeholder-img.png" alt="modern backpacks" />
                 </a>
               </div>
             </div>
@@ -192,7 +198,7 @@
             <div class="about__images">
               <picture class="lazy">
                 <source data-srcset="images/about-bg.webp" type="image/webp">
-                <img data-src="images/about-bg.png" src="images/placeholder-img.png" alt="" loading="lazy"/>
+                <img data-src="images/about-bg.png" src="images/placeholder-img.png" alt="Background image for about section" loading="lazy"/>
               </picture>
             </div>
             <div class="about__content">
@@ -206,7 +212,7 @@
                 eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
                 enim ad minim veniam.
               </p>
-              <a href="" class="yellow__btn">See more</a>
+              <a href="#" class="yellow__btn">See more</a>
             </div>
           </div>
         </div>
@@ -222,42 +228,42 @@
             <div class="our__items">
               <div class="our__item">
                 <a href="#">
-                  <img class="lazy" loading="lazy" data-src="images/our-img-1.webp" src="images/placeholder-img.png" alt="" />
+                  <img class="lazy" loading="lazy" data-src="images/our-img-1.webp" src="images/placeholder-img.png" alt="Bag" />
                 </a>
               </div>
               <div class="our__item">
                 <a href="#">
-                  <img class="lazy" loading="lazy" data-src="images/our-img-2.webp" src="images/placeholder-img.png" alt="" />
+                  <img class="lazy" loading="lazy" data-src="images/our-img-2.webp" src="images/placeholder-img.png" alt="Bag" />
                 </a>
               </div>
               <div class="our__item">
                 <a href="#">
-                  <img class="lazy" loading="lazy" data-src="images/our-img-3.webp" src="images/placeholder-img.png" alt="" />
+                  <img class="lazy" loading="lazy" data-src="images/our-img-3.webp" src="images/placeholder-img.png" alt="Bag" />
                 </a>
               </div>
               <div class="our__item">
                 <a href="#">
-                  <img class="lazy" loading="lazy" data-src="images/our-img-4.webp" src="images/placeholder-img.png" alt="" />
+                  <img class="lazy" loading="lazy" data-src="images/our-img-4.webp" src="images/placeholder-img.png" alt="Bag" />
                 </a>
               </div>
               <div class="our__item">
                 <a href="#">
-                  <img class="lazy" loading="lazy" data-src="images/our-img-5.webp" src="images/placeholder-img.png" alt="" />
+                  <img class="lazy" loading="lazy" data-src="images/our-img-5.webp" src="images/placeholder-img.png" alt="Bag" />
                 </a>
               </div>
               <div class="our__item">
                 <a href="#">
-                  <img class="lazy" loading="lazy" data-src="images/our-img-6.webp" src="images/placeholder-img.png" alt="" />
+                  <img class="lazy" loading="lazy" data-src="images/our-img-6.webp" src="images/placeholder-img.png" alt="Bag" />
                 </a>
               </div>
               <div class="our__item">
                 <a href="#">
-                  <img class="lazy" loading="lazy" data-src="images/our-img-7.webp" src="images/placeholder-img.png" alt="" />
+                  <img class="lazy" loading="lazy" data-src="images/our-img-7.webp" src="images/placeholder-img.png" alt="Bag" />
                 </a>
               </div>
               <div class="our__item">
                 <a href="#">
-                  <img class="lazy" loading="lazy" data-src="images/our-img-8.webp" src="images/placeholder-img.png" alt="" />
+                  <img class="lazy" loading="lazy" data-src="images/our-img-8.webp" src="images/placeholder-img.png" alt="Bag" />
                 </a>
               </div>
             </div>
@@ -276,22 +282,28 @@
                 <h2 class="form__title">
                   Lorem ipsum dolor sit amet adipiscing elit.
                 </h2>
-                <form>
+                <form action="#" method="post">
                   <div class="form__inputs">
+                    <label class="visually-hidden" for="name">Name</label>
                     <input
                       class="input__name"
+                      id="name"
                       type="text"
                       name="name"
                       placeholder="Name"
                     />
+                    <label class="visually-hidden" for="email">Email</label>
                     <input
                       class="input__email"
+                      id="email"
                       type="email"
                       name="email"
                       placeholder="Email"
                     />
+                    <label class="visually-hidden" for="address">Address</label>
                     <input
                       class="input__address"
+                      id="address"
                       type="text"
                       name="address"
                       placeholder="Addrress"
@@ -317,16 +329,16 @@
         <div class="container">
           <div class="carousel">
             <div class="company__images">
-              <img loading="lazy" src="images/company-logo-1.webp" alt="" />
-              <img loading="lazy" src="images/company-logo-2.webp" alt="" />
-              <img loading="lazy" src="images/company-logo-3.webp" alt="" />
-              <img loading="lazy" src="images/company-logo-4.webp" alt="" />
+              <img loading="lazy" src="images/company-logo-1.webp" alt="Company logo" />
+              <img loading="lazy" src="images/company-logo-2.webp" alt="Company logo" />
+              <img loading="lazy" src="images/company-logo-3.webp" alt="Company logo" />
+              <img loading="lazy" src="images/company-logo-4.webp" alt="Company logo" />
             </div>
-            <div class="company__images" aria-hidden>
-              <img loading="lazy" src="images/company-logo-1.webp" alt="" />
-              <img loading="lazy" src="images/company-logo-2.webp" alt="" />
-              <img loading="lazy" src="images/company-logo-3.webp" alt="" />
-              <img loading="lazy" src="images/company-logo-4.webp" alt="" />
+            <div class="company__images" aria-hidden="true">
+              <img loading="lazy" src="images/company-logo-1.webp" alt="Company logo" />
+              <img loading="lazy" src="images/company-logo-2.webp" alt="Company logo" />
+              <img loading="lazy" src="images/company-logo-3.webp" alt="Company logo" />
+              <img loading="lazy" src="images/company-logo-4.webp" alt="Company logo" />
             </div>
           </div>
         </div>
@@ -374,7 +386,8 @@
             <div class="footer__column">
               <h4>news latter</h4>
               <form>
-                <input class="footer__input" type="email" placeholder="enter your email">
+                <label class="visually-hidden" for="footer-email">Footer email</label>
+                <input class="footer__input" id="footer-email" type="email" placeholder="enter your email">
                 <button class="form-btn" type="submit">subscribe</button>
               </form>
             </div>
